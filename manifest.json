@@ -1,0 +1,22 @@
+{
+  "manifest_version" : 2,
+   "background": "bg.html",
+   "browser_action": {
+      "default_icon": "nxtcoin32.png",
+      "default_title": "Nextcoin Ticker",
+      "default_popup": "popup.html"
+   },
+   "description": "Keep track of current Nxt prices",
+   "name": "Nextcoin Ticker",
+   "icons": { "128": "nxtcoin128.png" },
+     "background": {
+    "scripts": ["jquery-1.10.2.min.js", "background.js"]
+    },
+   "permissions": [
+        "https://mtgox.com/*",
+        "https://dgex.com/*",
+        "http://coinmarketcap.com/*"
+    ],
+   "version": "0.0.1"
+
+}
