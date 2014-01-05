@@ -218,19 +218,34 @@ var nextcoinLive = (function (){
 			}
 
 			function updateTicker(){
-						jQuery.ajax({
-						     url: "http://coinmarketcap.com/",
-						     dataType: 'text',
+				
+				var BTCUSD = NaN;
+				var lastNxtPrice = NaN;
+				jQuery.ajax({
+						     url: "http://data.mtgox.com/api/1/BTCUSD/ticker",
+						     dataType: 'json',
 						     success: function(data) {
-						     	console.log('showing html');
-						     		var elements = $.parseHTML(data);
-						     		window.elements = $.parseHTML(data);
-						     		var prueba = $("#nxt td a.price", elements).attr('data-usd');
-						          	console.log(prueba);
-						          	message(prueba);
-						      
+						     	console.log('showing data');
+						      	BTCUSD = Number(data.return.avg.value);
+						      	console.log(BTCUSD);
+						      	
+						      	jQuery.ajax({
+								     url: "https://www.dgex.com/ticker4.cgi",
+								     dataType: 'json',
+								     success: function(data) {
+								     	console.log('showing data');
+								      	lastNxtPrice = Number(data.ticker[0].unitprice);
+								      	console.log(lastNxtPrice);
+								      	message( lastNxtPrice * BTCUSD);
+								     }
+								});
+
+				
 						     }
 						});
+
+					
+				
 			}
 			function startConnection () {
 

@@ -14,7 +14,7 @@
     },
    "permissions": [
         "https://mtgox.com/*",
-        "https://dgex.com/*",
+        "https://www.dgex.com/*",
         "http://coinmarketcap.com/*"
     ],
    "version": "0.0.1"
