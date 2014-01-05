@@ -15,7 +15,7 @@ So you can keep an eye on prices in a discreet but convenient way.
 
 Where?
 ------
-
+https://github.com/fumpierrez/SimpleNextCoinTicker
 
 
 How?
@@ -28,6 +28,7 @@ Or click on the "ADD TO CHROME" link on the webstore page.
 
 Credits?
 -------
+If you like this extension and want to support it, please donate to 9315343840137495316  (Nextcoin address)
 
 Heavily based on the work of 
 
